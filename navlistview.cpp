@@ -22,7 +22,7 @@ NavDelegate::~NavDelegate()
 QSize NavDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     QSize size(50, 28);
-    NavModel::TreeNode *node = (NavModel::TreeNode *)index.data(Qt::UserRole).toUInt();
+    NavModel::TreeNode *node = (NavModel::TreeNode *)index.data(Qt::UserRole).toULongLong();
 
     if (node->level == 1) {
         size = QSize(50, 35);
@@ -36,7 +36,7 @@ QSize NavDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelInde
 void NavDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     painter->setRenderHint(QPainter::Antialiasing);
-    NavModel::TreeNode *node = (NavModel::TreeNode *)index.data(Qt::UserRole).toUInt();
+    NavModel::TreeNode *node = (NavModel::TreeNode *)index.data(Qt::UserRole).toULongLong();
 
     //绘制背景
     QColor colorBg;
