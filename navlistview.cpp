@@ -29,7 +29,6 @@ QSize NavDelegate::sizeHint(const QStyleOptionViewItem &option, const QModelInde
     } else {
         size = QSize(50, 28);
     }
-
     return size;
 }
 
@@ -130,10 +129,10 @@ void NavDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, c
     painter->setPen(QPen(colorText));
 
     //绘制文字离左边的距离
-    int margin = 25;
+    int margin = 20;
 
     if (node->level == 2) {
-        margin = 45;
+        margin = 40;
     }
 
     QRect rect = option.rect;
@@ -358,15 +357,15 @@ NavListView::NavListView(QWidget *parent) : QListView(parent)
 
     icoStyle = NavListView::IcoStyle_Cross;
 
-    colorLine = QColor(214, 216, 224);
+    colorLine = QColor(115, 131, 147);
 
-    colorBgNormal = QColor(239, 241, 250);
-    colorBgSelected = QColor(133, 153, 216);
-    colorBgHover = QColor(209, 216, 240);
+    colorBgNormal = QColor(102, 116, 129);
+    colorBgSelected = QColor(58, 99, 115);
+    colorBgHover = QColor(112, 128, 144);
 
-    colorTextNormal = QColor(58, 58, 58);
+    colorTextNormal = QColor(231, 236, 240);
     colorTextSelected = QColor(255, 255, 255);
-    colorTextHover = QColor(59, 59, 59);
+    colorTextHover = QColor(232, 237, 241);
 
     this->setMouseTracking(true);
     model = new NavModel(this);

@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     a.setWindowIcon(QIcon(":/main.ico"));
     AppInit::Instance()->start();
     UIDemo5 w;
-    QUIWidget::setStyle(QUIWidget::Style_Blue);
+    QUIWidget::setStyle(QUIWidget::Style_Black);
     w.show();
 
     return a.exec();

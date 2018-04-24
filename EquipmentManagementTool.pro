@@ -8,7 +8,7 @@ QT       += core gui
 QT       += network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = EquipmentManagementTool
+TARGET = SmartSoloDeviceManager
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -47,5 +47,7 @@ RESOURCES += \
     image.qrc \
     main.qrc \
     qss.qrc
+	
 
-
+win32:CONFIG(release, debug|release):  DESTDIR = ../../Release
+else:win32:CONFIG(debug, debug|release): DESTDIR = ../../Debug 

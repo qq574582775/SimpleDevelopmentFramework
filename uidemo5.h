@@ -3,6 +3,7 @@
 
 #include <QDialog>
 
+
 namespace Ui {
 class UIDemo5;
 }
@@ -14,6 +15,10 @@ class UIDemo5 : public QDialog
 public:
     explicit UIDemo5(QWidget *parent = 0);
     ~UIDemo5();
+    
+private:
+    void init();
+    void updateProjInfo();
 
 private:
     Ui::UIDemo5 *ui;
